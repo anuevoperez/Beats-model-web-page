@@ -1,0 +1,34 @@
+.Product{
+    width:250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.ProductImage{
+    width:100%;
+    height:auto;
+    transition: transform 0.15s;
+}
+.ProductImage:hover{
+    transform: scale(1.05);
+}
+
+.ProductImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 40px;
+}
+
+.Name{
+    display: inline-block;
+    width:50%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    margin-top: 10px;
+}

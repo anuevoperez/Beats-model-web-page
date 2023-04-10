@@ -1,0 +1,92 @@
+.InfoImage img,
+.ContentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.Info {
+  display: flex;
+  height: calc(100vh - 80px); 
+  justify-content: center;
+  flex-direction: row;
+  gap: 15vh;
+  align-items: center;
+  background: rgba(248, 250, 250, 0.3) 50%;
+}
+
+.InfoImage {
+  height: 70vh;
+}
+
+.Article {
+  width: 45vw;
+}
+
+.InfoImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0g);
+  }
+}
+@media (max-aspect-ratio: 3/4){
+    .Article{
+        width: 80vw;
+    }
+}
+@media (max-width: 1250px) {
+  .InfoImage {
+    height: 35vh;
+    width: auto;
+  }
+}
+@media (max-width: 1000px) {
+  .Info {
+    flex-direction: column;
+    gap: 3vh;
+
+  }
+  .Article {
+    font-size: 1.2vh;
+  }
+}
+
+@media (max-width: 630px) {
+  .Article {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Article {
+    width: 90vw;
+  }
+
+  .InfoImage {
+    height: 35vh;
+    width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+    .Info {
+        margin-bottom: 10px;
+    }
+}

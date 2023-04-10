@@ -1,0 +1,44 @@
+.Input{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:100%;
+}
+
+.Label{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 0px;
+    font-weight: bold;
+    color:#fff;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+    font-size: 0.89em;
+}
+
+.InputField{
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    height: 1.3rem;
+    transition: transform 0.15s;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 1.1em;
+}
+
+.InputField:hover{
+    transform: scale(1.02);
+}
+
+.Error{
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 10px;
+}

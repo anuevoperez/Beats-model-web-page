@@ -1,0 +1,20 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --doc-height: 100%;
+ }
+html {
+  scroll-behavior: smooth;
+}
+html,body{
+  height:100%;
+  height: var(--doc-height);
+}
+
+#root{
+  min-height:100vh;
+  min-height: var(--doc-height);
+}

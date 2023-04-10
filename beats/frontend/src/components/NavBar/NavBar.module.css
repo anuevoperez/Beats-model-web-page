@@ -1,0 +1,195 @@
+.NavBar{
+    background-color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    box-shadow: 0px 0px 15px 1px #ed1c24;
+    transition: box-shadow 0.1s;
+}
+
+.NavBar>a{
+    font-family: 'Open Sans', sans-serif;
+    color: #080404;
+    font-size: 0.85em;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding: 30px 0px;
+    text-decoration: none;
+    transition: transform 0.35s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.NavBar>a:hover{
+    transform: scale(1.10);
+}
+
+.iconLinkedin{
+    width: 35px;
+    height: 35px;
+} 
+
+.NavBar:hover{
+    box-shadow: 0px 0px 15px 4px #ed1c24;
+}
+
+.logo{
+    width: 45px;
+    height: 45px;
+    /* position: absolute;
+    left: 12%; */
+}
+
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.opciones{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    gap: 60px;
+}
+
+.opciones a{
+    text-decoration: none;
+    color: #ed1c24;
+    padding-bottom: 2px;
+    font-size: 0.85em;
+    font-weight: bold;    
+    display:flex;
+    align-items: center;
+    position:relative;
+    flex-wrap:nowrap;
+    gap: 5px;
+}
+.opciones a ion-icon{
+    font-size: 20px;
+}
+.opciones a::after{
+    content: ' ';
+    display: block;
+    background-color: #ed1c24;
+    height: 1px;
+    width:0%;
+    transition: width 0.3s;
+    position: absolute;
+    bottom:-8px;
+}
+
+.opciones a:hover{
+    color: hsl(3, 83%, 64%);
+}
+
+.opciones a:hover::after{
+    width:100%;
+}
+.dspbtn{
+    display: none;
+    color: #ed1c24;
+}
+
+@keyframes rotate{
+
+    0%{
+        transform: rotate(0deg) ;
+    }
+    50%{
+        transform: rotate(360deg) ;
+    }
+    100%{
+        transform : rotate(0g);
+    }
+}
+
+@media (max-width: 1400px){
+    .sign{
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+
+    .logo{
+        width: 25px;
+        height: 25px;
+    }  
+    
+    .iconLinkedin{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .sign{
+        display: none;
+    }
+
+    .opciones{
+        gap: 25px;
+        font-size: 0.8em;
+    }
+
+    
+}
+
+@media (max-width:600px) {
+    .NavBar{
+        box-shadow: 0px 0px 15px 1px #ed1c24;
+        transition: box-shadow 0.1s;
+    }
+    .NavBar.active{
+        box-shadow: none;
+    }
+
+    .NavBar.active:hover{
+        box-shadow: none;
+    }
+    .NavBar:hover{
+        box-shadow: 0px 0px 15px 1px #ed1c24;
+        
+    }
+    .dspbtn{
+        display: inline;
+        color: #ed1c24;
+        transition: transform 0.1s;
+    }
+    .NavBar.active .dspbtn{
+        transform: rotate(-180deg);
+    }
+    .opciones{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 78px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0px;
+        box-shadow: inset 0px -15px 15px -15px #ed1c24;
+        font-size: 0.7em;
+        height:0px;
+        overflow-y: hidden;
+        transition: height 0.1s;
+        background-color: #fff;
+
+    }
+
+    .NavBar.active .opciones{
+        height:230px;
+        padding-bottom: 20px;
+    }
+
+}

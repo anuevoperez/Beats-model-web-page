@@ -1,0 +1,74 @@
+.Models{
+    height:calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.TitleProducts{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4vh ;
+    text-align: center;
+    
+}
+
+.TitleProducts h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.50em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+.RawProducts{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #ebebeb86;
+    border-radius: 30px;
+}
+
+@media (max-width: 1500px) {
+    .RawProducts{
+        width:80%
+    }
+}
+@media (max-width:1200px){
+    .RawProducts>div>div{
+        width:70%
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .TitleProducts h2{
+        font-size: 1.2em;
+    }
+
+    .RawProducts{
+        display: flex;
+        flex-direction: column;
+        height:60vh;
+        width: 90%;
+        font-size: 1.5vh;
+    }
+
+    .RawProducts>div{
+        flex-direction: row;
+        width:auto;
+    }
+
+    .RawProducts>div>div{
+        height:15vh;
+        width: auto;
+    }
+
+    .RawProducts>div img{
+        border-radius: 3vh;
+    }
+}
